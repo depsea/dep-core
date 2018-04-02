@@ -7,7 +7,7 @@ import (
 )
 
 // RoleModel -
-var RoleModel = NewModel()
+var RoleModel = Model{}
 
 // New -
 func New(e *gin.Engine) {

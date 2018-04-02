@@ -1,4 +1,4 @@
-package category
+package tag
 
 import (
 	"github.com/gin-gonic/gin"
@@ -6,11 +6,11 @@ import (
 
 // New -
 func New(e *gin.Engine) {
-	e.GET("/categories", list)
-	e.GET("/categories/:category_id", detail)
-	e.POST("/categories", create)
-	e.PUT("/categories/:category_id", update)
-	e.DELETE("/categories/:category_id", delete)
+	e.GET("/tags", list)
+	e.GET("/tags/:tag_id", detail)
+	e.POST("/tags", create)
+	e.PUT("/tags/:tag_id", update)
+	e.DELETE("/tags/:tag_id", delete)
 }
 
 func list(ctx *gin.Context) {
