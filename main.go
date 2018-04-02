@@ -3,9 +3,18 @@ package main
 import (
 	"fmt"
 
+	"github.com/depsea/api/app"
 	"github.com/depsea/api/core"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	core.NewEngine().Run(fmt.Sprintf(":%d", core.PORT))
+	r := gin.Default()
+
+	core.NewDB()
+	defer core.DB.Close()
+
+	app.NewRouter(r)
+
+	r.Run(fmt.Sprintf(":%d", core.PORT))
 }

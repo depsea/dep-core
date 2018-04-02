@@ -1,4 +1,4 @@
-package core
+package app
 
 import (
 	"github.com/depsea/api/app/article"
@@ -8,8 +8,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-// NewRoutes init routes
-func NewRoutes(e *gin.Engine) {
+// NewRouter init routes
+func NewRouter(e *gin.Engine) {
 	article.New(e)
 	category.New(e)
 	role.New(e)
