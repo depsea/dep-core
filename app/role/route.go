@@ -7,7 +7,7 @@ import (
 )
 
 // RoleModel -
-var RoleModel = Model{}
+var RoleModel = NewModel()
 
 // New -
 func New(e *gin.Engine) {
@@ -22,7 +22,7 @@ func list(ctx *gin.Context) {
 	roles, err := RoleModel.Find()
 
 	if err != nil {
-		core.DBError(ctx, []Role{})
+		core.DBError(ctx, err)
 		return
 	}
 
@@ -35,7 +35,7 @@ func detail(ctx *gin.Context) {
 	role, err := RoleModel.FindOne(_id)
 
 	if err != nil {
-		core.DBError(ctx)
+		core.DBError(ctx, err)
 		return
 	}
 
@@ -51,14 +51,14 @@ func create(ctx *gin.Context) {
 		return
 	}
 
-	err = RoleModel.Create(role)
+	res, err := RoleModel.Create(role)
 
 	if err != nil {
-		core.DBError(ctx)
+		core.DBError(ctx, err)
 		return
 	}
 
-	core.Result(ctx, *role)
+	core.Result(ctx, res)
 }
 
 func update(ctx *gin.Context) {
@@ -71,13 +71,15 @@ func update(ctx *gin.Context) {
 		core.BodyError(ctx)
 		return
 	}
-	err = RoleModel.Update(_id, role)
+
+	res, err := RoleModel.Update(_id, role)
 
 	if err != nil {
-		core.DBError(ctx)
+		core.DBError(ctx, err)
 		return
 	}
-	core.Result(ctx, *role)
+
+	core.Result(ctx, res)
 }
 
 func delete(ctx *gin.Context) {
@@ -86,7 +88,7 @@ func delete(ctx *gin.Context) {
 	role, err := RoleModel.Delete(_id)
 
 	if err != nil {
-		core.DBError(ctx)
+		core.DBError(ctx, err)
 		return
 	}
 

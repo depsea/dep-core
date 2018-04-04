@@ -8,7 +8,8 @@ create table role(
     name varchar(10) not null,
     description varchar(128) not null,
     create_time int not null,
-    update_time int not null
+    update_time int not null,
+    status int not null default 1
 );
 
 -- user

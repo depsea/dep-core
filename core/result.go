@@ -35,22 +35,11 @@ func BodyError(ctx *gin.Context, args ...interface{}) {
 	message := "body parse error."
 	data := gin.H{}
 
-	if len(args) > 0 {
-		data = args[0].(gin.H)
-	}
-
 	Result(ctx, data, code, message)
 }
 
 // DBError -
-func DBError(ctx *gin.Context, args ...interface{}) {
-	code := 50000
-	message := "server error."
-	data := gin.H{}
-
-	if len(args) > 0 {
-		data = args[0].(gin.H)
-	}
-
-	Result(ctx, data, code, message)
+func DBError(ctx *gin.Context, err error) {
+	print(err)
+	Result(ctx, nil, 50000, err.Error())
 }

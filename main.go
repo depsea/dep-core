@@ -11,8 +11,8 @@ import (
 func main() {
 	r := gin.Default()
 
-	core.NewDB()
-	defer core.DB.Close()
+	db := core.NewDB()
+	defer db.Close()
 
 	app.NewRouter(r)
 
