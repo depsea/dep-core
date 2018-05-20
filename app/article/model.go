@@ -1,7 +1,7 @@
 package article
 
 import (
-	"github.com/depsea/api/app/tag"
+	"github.com/depsea/dep-core/app/tag"
 )
 
 // ID -
@@ -11,11 +11,14 @@ type ID = int
 type Status = int
 
 const (
-	// Disabled -
-	Disabled Status = iota
+	// StatusUnable -
+	StatusUnable Status = iota
 
-	// Publish -
-	Publish
+	// StatusDraft -
+	StatusDraft
+
+	// StatusPublish -
+	StatusPublish
 )
 
 // Article -

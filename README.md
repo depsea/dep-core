@@ -1,2 +1,3 @@
-# api
-The api service.
+# dep-core
+
+> The api service for depsea.

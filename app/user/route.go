@@ -1,6 +1,6 @@
 package user
 
-import "github.com/depsea/api/app/role"
+import "github.com/depsea/dep-core/app/role"
 
 // ID -
 type ID int

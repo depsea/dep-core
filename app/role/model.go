@@ -1,7 +1,7 @@
 package role
 
 import (
-	"github.com/depsea/api/core"
+	"github.com/depsea/dep-core/core"
 )
 
 // ID -
@@ -11,10 +11,11 @@ type ID = int
 type Status = int
 
 const (
-	// StatusAble -
-	StatusAble Status = iota
 	// StatusUnable -
-	StatusUnable
+	StatusUnable Status = iota
+
+	// StatusAble -
+	StatusAble
 )
 
 // Role -
@@ -37,12 +38,9 @@ var modelInstance *Model
 
 // NewModel -
 func NewModel() *Model {
-
-	if modelInstance != nil {
-		return modelInstance
+	if modelInstance == nil {
+		modelInstance = &Model{}
 	}
-
-	modelInstance = &Model{}
 	return modelInstance
 }
 

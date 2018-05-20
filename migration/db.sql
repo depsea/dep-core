@@ -9,7 +9,7 @@ create table role(
     description varchar(128) not null,
     create_time int not null,
     update_time int not null,
-    status int not null default 1
+    status int default 1
 );
 
 -- user
@@ -21,7 +21,8 @@ create table _user(
     website varchar(128),
     role_id int not null,
     create_time int not null,
-    update_time int not null
+    update_time int not null,
+    status int default 1
 );
 
 -- tag
@@ -30,7 +31,8 @@ create table tag(
     name varchar(10) not null,
     description varchar(128) not null,
     create_time int not null,
-    update_time int not null
+    update_time int not null,
+    status int default 1
 );
 
 -- article
@@ -42,6 +44,6 @@ create table article(
     create_time int not null,
     update_time int not null,
     publish_time int not null,
-    status int not null
+    status int default 1
 );
 

@@ -1,4 +1,4 @@
-package: github.com/depsea/api
+package: github.com/depsea/dep-core
 import:
 - package: github.com/gin-gonic/gin
   version: v1.2

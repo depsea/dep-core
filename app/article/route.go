@@ -1,8 +1,8 @@
 package article
 
 import (
-	"github.com/depsea/api/core"
-	"github.com/depsea/api/middlewares"
+	"github.com/depsea/dep-core/core"
+	"github.com/depsea/dep-core/middlewares"
 	"github.com/gin-gonic/gin"
 )
 

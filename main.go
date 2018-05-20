@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/depsea/api/app"
-	"github.com/depsea/api/core"
+	"github.com/depsea/dep-core/app"
+	"github.com/depsea/dep-core/core"
 	"github.com/gin-gonic/gin"
 )
 

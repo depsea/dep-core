@@ -1,7 +1,7 @@
 package core
 
 // PORT that server running
-const PORT = 8000
+const PORT = 7999
 
 // DBUser -
 const DBUser = "postgres"
