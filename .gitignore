@@ -15,3 +15,5 @@
 
 # go libs
 vendor
+
+dep-core
