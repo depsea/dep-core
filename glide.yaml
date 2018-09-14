@@ -2,5 +2,5 @@ package: github.com/depsea/dep-core
 import:
 - package: github.com/gin-gonic/gin
   version: v1.2
-- package: github.com/go-pg/pg
-  version: v6.11.0
+- package: github.com/lib/pq
+  version: ^1.0.0

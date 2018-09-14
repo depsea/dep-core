@@ -1,35 +1,8 @@
-hash: 1a156fbfcb41e39d9c4623a4f592ac41397a9c99a2ec70fb5772adf7d30bd698
-updated: 2018-03-29T17:19:26.674045+08:00
+hash: c5d56e97603bf7cee9239120d683ecffcfce99802928e7a552f330834e7719b2
+updated: 2018-09-14T16:51:37.728339+08:00
 imports:
-- name: github.com/gin-contrib/sse
-  version: 22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae
 - name: github.com/gin-gonic/gin
   version: d459835d2b077e44f7c9b453505ee29881d5d12d
-  subpackages:
-  - binding
-  - render
-- name: github.com/go-pg/pg
-  version: b1624e5f6fe8ca242ad374fcac1ef05ecd3075f8
-  subpackages:
-  - internal
-  - internal/parser
-  - internal/pool
-  - orm
-  - types
-- name: github.com/golang/protobuf
-  version: e09c5db296004fbe3f74490e84dcd62c3c5ddb1b
-  subpackages:
-  - proto
-- name: github.com/jinzhu/inflection
-  version: 04140366298a54a039076d798123ffa108fff46c
-- name: github.com/mattn/go-isatty
-  version: 6ca4dbf54d38eea1a992b3c722a76a5d1c4cb25c
-- name: github.com/ugorji/go
-  version: 02537d3a3e32ef636a53519265d211bd208ca488
-  subpackages:
-  - codec
-- name: gopkg.in/go-playground/validator.v8
-  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
-- name: gopkg.in/yaml.v2
-  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+- name: github.com/lib/pq
+  version: 4ded0e9383f75c197b3a2aaa6d590ac52df6fd79
 testImports: []

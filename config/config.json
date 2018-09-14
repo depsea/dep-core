@@ -1,0 +1,16 @@
+{
+    "db": {
+        "host": "127.0.0.1",
+        "port": 5432,
+        "user": "postgres",
+        "password": "123456",
+        "name": "depsea"
+    },
+    "redis": {
+        "host": "127.0.0.1",
+        "port": 4399
+    },
+    "server": {
+        "addr": ":7999"
+    }
+}

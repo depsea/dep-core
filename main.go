@@ -1,20 +1,21 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/depsea/dep-core/app"
-	"github.com/depsea/dep-core/core"
+	"github.com/depsea/dep-core/config"
+	"github.com/depsea/dep-core/routes"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	r := gin.Default()
 
-	db := core.NewDB()
-	defer db.Close()
+	routes.Register(r)
 
-	app.NewRouter(r)
+	config, err := config.GetConfig()
 
-	r.Run(fmt.Sprintf(":%d", core.PORT))
+	if err != nil {
+		panic(err)
+	}
+
+	r.Run(config.Server.Addr)
 }
